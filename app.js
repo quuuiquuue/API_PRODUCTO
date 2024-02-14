@@ -1,9 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 const port = 3000;
 const app = express();
+
+// Configurar CORS
+app.use(cors());
 
 // Definir la información básica de Swagger
 const options = {
